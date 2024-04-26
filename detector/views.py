@@ -26,9 +26,9 @@ def predict_image(img):
     result = np.argmax(prediction, axis=1)
 
     if result == 0:
-        return "Benign"
+        return "mafihch cancer"
     else:
-        return "Malignant"
+        return "fih cancer"
 
 
 def result(request):

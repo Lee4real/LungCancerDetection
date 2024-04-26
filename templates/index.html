@@ -2,15 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport">
     <title>Lung Cancer Detection</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
 </head>
-<body>
-    <h1>Lung Cancer Detection</h1>
+<body class="bodyAll">
+<header>
+    <div class="logo">
+        <a href="#">Lung Cancer Detection</a>
+    </div>
+</header>
+<h1>          </h1>
+<div class="content">
     <form action="/result/" method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        <input type="file" name="img" required>
-        <button type="submit">Submit Image</button>
+        <div class="sidebar">
+            <img id="imagePreview" src="#" alt="Image Preview">
+            <input id="imgInput" type="file" name="img" required>
+            <button type="submit">Submit Image</button>
+        </div>
     </form>
+</div>
 </body>
+{% load static %}
+<script src="{% static 'script.js' %}"></script>
 </html>
